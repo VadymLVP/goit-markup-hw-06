@@ -535,10 +535,17 @@
   transform: translateY(-40px) translateX(-19px);
 }
 
+.comment-input-lable:focus-within .form-lable {
+  transform: translateY(-32px) translateX(6px);
+}
+
 .form-input:not(:placeholder-shown) + .form-lable {
   transform: translateY(-40px) translateX(-19px);
 }
 
+/* .comment-input-lable:not(:placeholder-shown) + .form-lable {
+  transform: translateY(-32px) translateX(6px);
+} */
 /* .form-input:focus + .form-lable,
 .form-input:not(:placeholder-shown) + .form-lable {
   color: var(--accent-color);
@@ -612,7 +619,7 @@
   border-radius: 2px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .checkbox-icon {

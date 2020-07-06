@@ -618,7 +618,12 @@
           </div> -->
 
           <label class="form-field">
-            <input class="form-input" type="text" name="name" placeholder=" " />
+            <input
+              class="form-input"
+              type="email"
+              name="name"
+              placeholder=" "
+            />
             <span class="form-lable">Почта</span>
             <svg class="icon">
               <use href="./images/sprite.svg#icon-mail-form"></use>
@@ -637,7 +642,7 @@
             >
           </div> -->
 
-          <label class="form-field">
+          <label class="form-field comment-input-lable">
             <textarea
               class="comment form-input"
               name="comment"
@@ -667,33 +672,35 @@
               value="policy"
             />
             <span class="checkbox-icon"></span>
-            <span>Соглашаюсь с рассылкой и принимаю
+            <span
+              >Соглашаюсь с рассылкой и принимаю
               <a href="" class="conditions">Условия договора</a>
             </span>
-            
           </label>
 
           <div class="modal-button">
-            <button class="close-button" data-modal-close>
-              <svg class="close-icon">
-                <use href="./images/sprite.svg#icon-close-button"></use>
-              </svg>
-            </button>
             <button type="submit" class="button">Отправить</button>
           </div>
         </form>
+        <div>
+          <button class="close-button" data-modal-close>
+            <svg class="close-icon">
+              <use href="./images/sprite.svg#icon-close-button"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 
     <script>
       (() => {
         document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
             e.preventDefault();
 
             new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
+              console.log(`${name}: ${value}`)
             );
 
             e.currentTarget.reset();
